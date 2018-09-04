@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import arrow from './arrow.svg';
+import {
+  HashRouter,
+  Route,
+  Link,
+  Switch,
+  NavLink,
+} from 'react-router-dom';
 import './App.css';
 
 // ###### Main page #####
@@ -8,7 +15,8 @@ const mainPageStyle = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  flexDirection: "column"
+  flexDirection: "column",
+  height: "100vh"
 };
 const nameCardStyle = {
   width: "220px",
@@ -29,7 +37,10 @@ class MainPage extends Component{
   return(
           <div style={mainPageStyle}>
             <Start/>
+            <Link to = "/roomiesnumber">
             <Next/>
+            </Link>
+
           </div>
         )
   }
@@ -82,9 +93,13 @@ class RoomiesNumberPage extends Component{
   render(){
   return (
           <div  style={mainPageStyle}>
+            <Link to = "/">
             <Previous/>
+            </Link>
             <h1>Type a number of roommates at your flat</h1>
+            <Link to = "/names">
             <Next/>
+            </Link>
           </div>
         )
   }
@@ -94,9 +109,13 @@ class NamesPage extends Component{
   render(){
     return(
             <div style={mainPageStyle}>
+              <Link to = "/roomiesnumber">
               <Previous/>
+              </Link>
               <CardContainer/>
+              <Link to = "/chorelist">
               <Next/>
+              </Link>
             </div>
           )
   }
@@ -123,10 +142,14 @@ class ChoresListPage extends React.Component{
   render(){
     return(
       <div style={mainPageStyle}>
+        <Link to = "/names">
         <Previous/>
+        </Link>
         <h1>Add chores you would like to share</h1>
         <AddChore/>
+        <Link to = "/table">
         <Next/>
+        </Link>
       </div>
     )
   }
@@ -150,11 +173,15 @@ class ChoresTablePage extends React.Component{
   render(){
     return(
       <div style={mainPageStyle}>
+        <Link to = "/chorelist">
         <Previous/>
+        </Link>
         <h1>Divide up chores</h1>
         <CardContainer/>
         <Table/>
+        <Link to = "final">
         <Next/>
+        </Link>
       </div>
     )
   }
@@ -170,7 +197,9 @@ class FinalPage extends React.Component{
   render(){
    return(
      <div style={mainPageStyle}>
+       <Link to = "/table">
        <Previous/>
+       </Link>
        <h1>Your plan is ready!</h1>
        <h2>Now you can download it & Print</h2>
        <h3>or</h3>
@@ -188,14 +217,24 @@ class FinalPage extends React.Component{
 class App extends Component {
   render() {
     return (
-            <div>
-              <MainPage/>
-              <RoomiesNumberPage/>
-              <NamesPage/>
-              <ChoresListPage/>
-              <ChoresTablePage/>
-              <FinalPage/>
+      <HashRouter>
+
+      <div>
+        <Switch>
+              <Route  exact path ="/" component = {MainPage}/>
+              <Route  path ="/roomiesnumber" component = {RoomiesNumberPage}/>
+              <Route  path ="/names" component = {NamesPage}/>
+              <Route  path ="/chorelist" component = {ChoresListPage}/>
+              <Route  path ="/table" component = {ChoresTablePage}/>
+              <Route  path ="/final" component = {FinalPage}/>
+        </Switch>
+              {/*<RoomiesNumberPage/>*/}
+              {/*<NamesPage/>*/}
+              {/*<ChoresListPage/>*/}
+              {/*<ChoresTablePage/>*/}
+              {/*<FinalPage/>*/}
             </div>
+            </HashRouter>
           );
   }
 }

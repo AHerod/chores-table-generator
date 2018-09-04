@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c12dba23-3f41-499b-88a3-23320d6e2ac2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/random.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/registerServiceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,23 +17,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.573">
+    <splitter split-orientation="horizontal" split-proportion="0.8185699">
       <split-first>
         <leaf>
           <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="526">
-                  <caret line="196" column="26" selection-start-line="196" selection-start-column="26" selection-end-line="196" selection-end-column="26" />
+                <state relative-caret-position="162">
+                  <caret line="224" column="56" selection-start-line="224" selection-start-column="56" selection-end-line="224" selection-end-column="56" />
                   <folding>
-                    <element signature="e#130#155#0" />
+                    <element signature="e#144#301#0" />
+                    <element signature="e#293#432#0" />
                     <element signature="e#544#577#0" />
-                    <element signature="n#MainPage#0" />
-                    <element signature="n#!!block;n#render#0;n#MainPage#0" />
-                    <element signature="e#166#189#0" />
                     <element signature="n#Start#0" />
-                    <element signature="n#!!block;n#render#0;n#Start#0" />
-                    <element signature="e#288#315#0" />
                     <element signature="n#Next#0" />
                     <element signature="n#!!block;n#constructor#0;n#Next#0" />
                     <element signature="e#897#929#0" />
@@ -51,15 +40,29 @@
                     <element signature="e#1172#1204#0" />
                     <element signature="n#!!block;n#render#0;n#Next#1" />
                     <element signature="e#1243#1341#0" />
-                    <element signature="n#RoomiesNumberPage#0" />
                     <element signature="n#!!block;n#render#0;n#RoomiesNumberPage#0" />
-                    <element signature="e#1087#1110#0" />
-                    <element signature="n#!!block;n#render#0;n#ChoresList#0" />
-                    <element signature="e#2501#2547#0" />
+                    <element signature="n#CardContainer#0" />
+                    <element signature="n#!!block;n#constructor#0;n#CardContainer#0" />
+                    <element signature="n#!!block;n#render#0;n#CardContainer#0" />
+                    <element signature="e#2425#2623#0" />
+                    <element signature="e#2518#2604#0" />
+                    <element signature="n#AddChore#0" />
                     <element signature="n#!!block;n#render#0;n#AddChore#0" />
                     <element signature="e#2793#3109#0" />
                     <element signature="e#3055#3122#0" />
+                    <element signature="n#Table#0" />
+                    <element signature="n#!!block;n#render#0;n#Table#0" />
+                    <element signature="e#3978#4091#0" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sectional.rnc" pinned="false" current-in-tab="false">
+            <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/sectional.rnc">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="282">
+                  <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -92,7 +95,7 @@
           <file leaf-file-name="App.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/App.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="413">
+                <state relative-caret-position="408">
                   <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
                 </state>
               </provider>
@@ -101,6 +104,14 @@
         </leaf>
       </split-second>
     </splitter>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ro</find>
+      <find>rou</find>
+      <find>ru</find>
+      <find>link</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -129,9 +140,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="897" />
+    <option name="x" value="960" />
     <option name="y" value="25" />
-    <option name="width" value="1023" />
+    <option name="width" value="960" />
     <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -179,7 +190,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wro_fer_s13_react_react/1_Zadania/Dzien_5/1_Routing_podstawy" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
@@ -211,15 +222,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536049307670</updated>
-      <workItem from="1536049309053" duration="12462000" />
+      <workItem from="1536049309053" duration="17322000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12462000" />
+    <option name="totallyTimeSpent" value="17322000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="897" y="25" width="1023" height="1055" extended-state="4" />
+    <frame x="960" y="25" width="960" height="1055" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
@@ -229,7 +240,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.15509762" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.43383947" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -255,6 +266,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2625">
+          <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/sectional.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/App.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -265,26 +300,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="196" column="26" selection-start-line="196" selection-start-column="26" selection-end-line="196" selection-end-column="26" />
+        <state relative-caret-position="162">
+          <caret line="224" column="56" selection-start-line="224" selection-start-column="56" selection-end-line="224" selection-end-column="56" />
           <folding>
-            <element signature="e#130#155#0" />
+            <element signature="e#144#301#0" />
+            <element signature="e#293#432#0" />
             <element signature="e#544#577#0" />
-            <element signature="n#MainPage#0" />
-            <element signature="n#!!block;n#render#0;n#MainPage#0" />
-            <element signature="e#166#189#0" />
             <element signature="n#Start#0" />
-            <element signature="n#!!block;n#render#0;n#Start#0" />
-            <element signature="e#288#315#0" />
             <element signature="n#Next#0" />
             <element signature="n#!!block;n#constructor#0;n#Next#0" />
             <element signature="e#897#929#0" />
@@ -295,14 +319,19 @@
             <element signature="e#1172#1204#0" />
             <element signature="n#!!block;n#render#0;n#Next#1" />
             <element signature="e#1243#1341#0" />
-            <element signature="n#RoomiesNumberPage#0" />
             <element signature="n#!!block;n#render#0;n#RoomiesNumberPage#0" />
-            <element signature="e#1087#1110#0" />
-            <element signature="n#!!block;n#render#0;n#ChoresList#0" />
-            <element signature="e#2501#2547#0" />
+            <element signature="n#CardContainer#0" />
+            <element signature="n#!!block;n#constructor#0;n#CardContainer#0" />
+            <element signature="n#!!block;n#render#0;n#CardContainer#0" />
+            <element signature="e#2425#2623#0" />
+            <element signature="e#2518#2604#0" />
+            <element signature="n#AddChore#0" />
             <element signature="n#!!block;n#render#0;n#AddChore#0" />
             <element signature="e#2793#3109#0" />
             <element signature="e#3055#3122#0" />
+            <element signature="n#Table#0" />
+            <element signature="n#!!block;n#render#0;n#Table#0" />
+            <element signature="e#3978#4091#0" />
           </folding>
         </state>
       </provider>
