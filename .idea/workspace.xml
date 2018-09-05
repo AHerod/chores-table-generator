@@ -3,75 +3,118 @@
   <component name="ChangeListManager">
     <list default="true" id="c12dba23-3f41-499b-88a3-23320d6e2ac2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="918174270">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="1990" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="1990" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="md" value="3" />
+          <entry key="rnc" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Markdown" value="3" />
+          <entry key="RNG Compact" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.8185699">
+    <splitter split-orientation="horizontal" split-proportion="0.8955717">
       <split-first>
-        <leaf>
-          <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="162">
-                  <caret line="224" column="56" selection-start-line="224" selection-start-column="56" selection-end-line="224" selection-end-column="56" />
+                <state relative-caret-position="380">
+                  <caret line="397" column="69" selection-start-line="397" selection-end-line="398" />
                   <folding>
-                    <element signature="e#144#301#0" />
-                    <element signature="e#293#432#0" />
-                    <element signature="e#544#577#0" />
-                    <element signature="n#Start#0" />
-                    <element signature="n#Next#0" />
-                    <element signature="n#!!block;n#constructor#0;n#Next#0" />
-                    <element signature="e#897#929#0" />
-                    <element signature="n#!!block;n#render#0;n#Next#0" />
-                    <element signature="e#798#915#0" />
-                    <element signature="n#Next#1" />
-                    <element signature="n#!!block;n#constructor#0;n#Next#1" />
-                    <element signature="e#1172#1204#0" />
-                    <element signature="n#!!block;n#render#0;n#Next#1" />
-                    <element signature="e#1243#1341#0" />
-                    <element signature="n#!!block;n#render#0;n#RoomiesNumberPage#0" />
-                    <element signature="n#CardContainer#0" />
-                    <element signature="n#!!block;n#constructor#0;n#CardContainer#0" />
-                    <element signature="n#!!block;n#render#0;n#CardContainer#0" />
-                    <element signature="e#2425#2623#0" />
-                    <element signature="e#2518#2604#0" />
-                    <element signature="n#AddChore#0" />
-                    <element signature="n#!!block;n#render#0;n#AddChore#0" />
-                    <element signature="e#2793#3109#0" />
-                    <element signature="e#3055#3122#0" />
-                    <element signature="n#Table#0" />
-                    <element signature="n#!!block;n#render#0;n#Table#0" />
-                    <element signature="e#3978#4091#0" />
+                    <element signature="e#0#41#0" expanded="true" />
+                    <element signature="e#269#411#0" />
+                    <element signature="e#435#611#0" />
+                    <element signature="e#637#788#0" />
+                    <element signature="e#817#990#0" />
+                    <element signature="e#1004#1040#0" />
+                    <element signature="e#1042#1262#0" />
+                    <element signature="e#1086#1260#0" />
+                    <element signature="e#1108#1246#0" />
+                    <element signature="e#1169#1229#0" />
+                    <element signature="e#1309#1589#0" />
+                    <element signature="e#1350#1587#0" />
+                    <element signature="e#1376#1571#0" />
+                    <element signature="e#1473#1552#0" />
+                    <element signature="e#1632#1906#0" />
+                    <element signature="e#1683#1756#0" />
+                    <element signature="e#1720#1752#0" />
+                    <element signature="e#1767#1904#0" />
+                    <element signature="e#1791#1889#0" />
+                    <element signature="e#1907#2190#0" />
+                    <element signature="e#1962#2035#0" />
+                    <element signature="e#1999#2031#0" />
+                    <element signature="e#2046#2188#0" />
+                    <element signature="e#2072#2172#0" />
+                    <element signature="e#2192#2229#0" />
+                    <element signature="e#5496#6586#0" />
+                    <element signature="e#5555#5643#0" />
+                    <element signature="e#5600#5636#0" />
+                    <element signature="e#5669#5782#0" />
+                    <element signature="e#5725#5774#0" />
+                    <element signature="e#5808#5848#0" />
+                    <element signature="e#5861#6584#0" />
+                    <element signature="e#5883#5951#0" />
+                    <element signature="e#5975#6043#0" />
+                    <element signature="e#6074#6568#0" />
+                    <element signature="e#6183#6487#0" />
+                    <element signature="e#6504#6549#0" />
+                    <element signature="e#6727#6787#0" />
+                    <element signature="e#7151#7603#0" />
+                    <element signature="e#7202#7601#0" />
+                    <element signature="e#7220#7592#0" />
+                    <element signature="e#7255#7309#0" />
+                    <element signature="e#7467#7580#0" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="sectional.rnc" pinned="false" current-in-tab="false">
-            <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/sectional.rnc">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="282">
-                  <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="App.test.js" pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/App.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+                <state relative-caret-position="135">
+                  <caret line="9" selection-start-line="9" selection-end-line="9" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -79,11 +122,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="random.js" pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/random.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="25">
-                  <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-end-line="3" />
+                <state relative-caret-position="30">
+                  <caret line="2" column="10" selection-start-line="2" selection-end-line="3" />
                 </state>
               </provider>
             </entry>
@@ -92,11 +135,12 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="App.css" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/App.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="408">
-                  <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://E:/PULPSON/CODE/react_m5/2_Snippety/readme.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="SECOND">
+                  <first_editor />
+                  <second_editor />
                 </state>
               </provider>
             </entry>
@@ -111,6 +155,7 @@
       <find>rou</find>
       <find>ru</find>
       <find>link</find>
+      <find>roomiesN</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,11 +184,10 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="960" />
-    <option name="y" value="25" />
-    <option name="width" value="960" />
-    <option name="height" value="1055" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="447" />
+    <option name="width" value="1482" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -172,16 +216,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -190,10 +224,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wro_fer_s13_react_react/1_Zadania/Dzien_5/1_Routing_podstawy" />
+    <property name="last_opened_file_path" value="E:/PULPSON/CODE/react_m5/2_Snippety/readme.md" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -223,33 +257,39 @@
       <option name="presentableId" value="Default" />
       <updated>1536049307670</updated>
       <workItem from="1536049309053" duration="17322000" />
+      <workItem from="1536078333162" duration="944000" />
+      <workItem from="1536079397170" duration="2040000" />
+      <workItem from="1536082656685" duration="185000" />
+      <workItem from="1536083526540" duration="12221000" />
+      <workItem from="1536122725869" duration="1598000" />
+      <workItem from="1536129121048" duration="20563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17322000" />
+    <option name="totallyTimeSpent" value="54873000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="25" width="960" height="1055" extended-state="4" />
+    <frame x="358" y="0" width="1185" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.43383947" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.09756097" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32907802" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,20 +299,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/random.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2625">
@@ -283,17 +309,46 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/phrase.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5175">
+          <caret line="345" column="16" selection-start-line="345" selection-start-column="16" selection-end-line="345" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/random.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="10" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/sectional.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
+        <state relative-caret-position="420">
           <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/PULPSON/CODE/react_m5/2_Snippety/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/App.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -302,36 +357,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="224" column="56" selection-start-line="224" selection-start-column="56" selection-end-line="224" selection-end-column="56" />
+        <state relative-caret-position="380">
+          <caret line="397" column="69" selection-start-line="397" selection-end-line="398" />
           <folding>
-            <element signature="e#144#301#0" />
-            <element signature="e#293#432#0" />
-            <element signature="e#544#577#0" />
-            <element signature="n#Start#0" />
-            <element signature="n#Next#0" />
-            <element signature="n#!!block;n#constructor#0;n#Next#0" />
-            <element signature="e#897#929#0" />
-            <element signature="n#!!block;n#render#0;n#Next#0" />
-            <element signature="e#798#915#0" />
-            <element signature="n#Next#1" />
-            <element signature="n#!!block;n#constructor#0;n#Next#1" />
-            <element signature="e#1172#1204#0" />
-            <element signature="n#!!block;n#render#0;n#Next#1" />
-            <element signature="e#1243#1341#0" />
-            <element signature="n#!!block;n#render#0;n#RoomiesNumberPage#0" />
-            <element signature="n#CardContainer#0" />
-            <element signature="n#!!block;n#constructor#0;n#CardContainer#0" />
-            <element signature="n#!!block;n#render#0;n#CardContainer#0" />
-            <element signature="e#2425#2623#0" />
-            <element signature="e#2518#2604#0" />
-            <element signature="n#AddChore#0" />
-            <element signature="n#!!block;n#render#0;n#AddChore#0" />
-            <element signature="e#2793#3109#0" />
-            <element signature="e#3055#3122#0" />
-            <element signature="n#Table#0" />
-            <element signature="n#!!block;n#render#0;n#Table#0" />
-            <element signature="e#3978#4091#0" />
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#269#411#0" />
+            <element signature="e#435#611#0" />
+            <element signature="e#637#788#0" />
+            <element signature="e#817#990#0" />
+            <element signature="e#1004#1040#0" />
+            <element signature="e#1042#1262#0" />
+            <element signature="e#1086#1260#0" />
+            <element signature="e#1108#1246#0" />
+            <element signature="e#1169#1229#0" />
+            <element signature="e#1309#1589#0" />
+            <element signature="e#1350#1587#0" />
+            <element signature="e#1376#1571#0" />
+            <element signature="e#1473#1552#0" />
+            <element signature="e#1632#1906#0" />
+            <element signature="e#1683#1756#0" />
+            <element signature="e#1720#1752#0" />
+            <element signature="e#1767#1904#0" />
+            <element signature="e#1791#1889#0" />
+            <element signature="e#1907#2190#0" />
+            <element signature="e#1962#2035#0" />
+            <element signature="e#1999#2031#0" />
+            <element signature="e#2046#2188#0" />
+            <element signature="e#2072#2172#0" />
+            <element signature="e#2192#2229#0" />
+            <element signature="e#5496#6586#0" />
+            <element signature="e#5555#5643#0" />
+            <element signature="e#5600#5636#0" />
+            <element signature="e#5669#5782#0" />
+            <element signature="e#5725#5774#0" />
+            <element signature="e#5808#5848#0" />
+            <element signature="e#5861#6584#0" />
+            <element signature="e#5883#5951#0" />
+            <element signature="e#5975#6043#0" />
+            <element signature="e#6074#6568#0" />
+            <element signature="e#6183#6487#0" />
+            <element signature="e#6504#6549#0" />
+            <element signature="e#6727#6787#0" />
+            <element signature="e#7151#7603#0" />
+            <element signature="e#7202#7601#0" />
+            <element signature="e#7220#7592#0" />
+            <element signature="e#7255#7309#0" />
+            <element signature="e#7467#7580#0" />
           </folding>
         </state>
       </provider>
