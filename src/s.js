@@ -59,6 +59,7 @@ class ChoresConatiner extends React.Component {
         }
     }
 
+{rows.map((cell, index)=> createData( cell, index, this.props.cellChores, 4.0))}
 
     generateNames = () => {
         return this.state.chores.map((item, index) => <div key={index} style={choresCardStyle}>{item}</div>)

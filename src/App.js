@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 import arrow from './arrow.svg';
+import { render } from 'react-dom';
+import TableChores from './table.';
 import Hexagon from 'react-hexagon';
+
+import { PDFExport, savePDF } from '@progress/kendo-react-pdf';
+
 import {
     HashRouter,
     Route,
@@ -94,7 +99,6 @@ class Next extends Component {
         )
     }
 }
-
 class Previous extends Component {
     constructor(props) {
         super(props);
@@ -177,7 +181,6 @@ class NamesPage extends React.Component {
         );
     }
 }
-
 class NamesConatiner extends React.Component {
     state = {
         names: this.props.names
@@ -218,6 +221,7 @@ class ChoresListPage extends React.Component {
         super(props);
         this.state = {
             type: '',
+            term: '',
             chores: this.props.chores
         };
     }
@@ -242,9 +246,10 @@ class ChoresListPage extends React.Component {
                 </Link>
                 <form className="App" onSubmit={this.onSubmit}>
                     <input value={this.state.type} onChange={this.onChange}/>
+                    <Hint onClick ={this.onChange}/>
                     <button>Add</button>
                 </form>
-                <ChoresConatiner addChore={this.props.add3} chores={this.state.chores}/>
+                <ChoresConatiner addChore={this.props.add3} chores={this.state.chores}  />
                 <Link to="/table">
                     <Next/>
                 </Link>
@@ -252,7 +257,6 @@ class ChoresListPage extends React.Component {
         );
     }
 }
-
 class ChoresConatiner extends React.Component {
     state = {
         chores: this.props.chores
@@ -291,6 +295,7 @@ class Hint extends React.Component {
         super(props);
         this.state = {
             shown: true,
+            type: ''
         };
     }
 
@@ -318,7 +323,7 @@ class Hint extends React.Component {
 
         return (
             <div>
-                <div className="hint" style={hint} onClick={this.showHint}>Hint</div>
+                <div className="hint" style={hint} onClick={this.showHint}  value={this.state.term}>Hint</div>
                 <div style={hidden}>
                     <button onClick={this.addChore}>vacuuming</button>
                     <button>washing and putting away the dishes</button>
@@ -334,8 +339,11 @@ class Hint extends React.Component {
 }
 // ###### Table page #####
 class ChoresTablePage extends React.Component {
-
+    exportPDFWithComponent = () => {
+        this.pdfExportComponent.save();
+    }
     render() {
+        console.log(this.props.add2)
         return (
             <div style={mainPageStyle}>
                 <Link to="/chorelist">
@@ -351,18 +359,25 @@ class ChoresTablePage extends React.Component {
 
                     </div>
                 </div>
-
-                <Table/>
+                <button onClick={this.exportPDFWithComponent}>Export with component</button>
+                <PDFExport ref={(component) => this.pdfExportComponent = component} paperSize="A4" landscape={true}  >
+                <TableChores cellChores = {this.props.add4}/>
                 <Link to="final">
                     <Next/>
                 </Link>
+                </PDFExport>
+
             </div>
         )
     }
 }
 class Table extends React.Component {
     render() {
-        return <h1>tu będzie tabela</h1>
+        return (
+            <h1>tu będzie tabela</h1>
+
+
+        )
     }
 }
 class FinalPage extends React.Component {
