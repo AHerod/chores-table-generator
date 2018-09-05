@@ -41,3 +41,16 @@
   justify-content: space-around;
   width: 800px;
 }
+
+.names{
+  border: 1px solid green;
+  display: flex;
+
+}
+.chores{
+  border: 1px solid purple;
+  display: flex;
+}
+
+.lists{
+}
