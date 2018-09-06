@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import arrow from './arrow.svg';
-import { render } from 'react-dom';
+import "./sass/main.css"
+import {render} from 'react-dom';
 import TableChores from './table.';
 import Hexagon from 'react-hexagon';
-
-import { PDFExport, savePDF } from '@progress/kendo-react-pdf';
-
+import {PDFExport, savePDF} from '@progress/kendo-react-pdf';
 import {
     HashRouter,
     Route,
@@ -24,15 +23,7 @@ const mainPageStyle = {
     flexDirection: "column",
     height: "100vh"
 };
-const nameCardStyle = {
-    width: "120px",
-    height: "120px",
-    border: "2px solid black",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: "30%"
-};
+
 const choresCardStyle = {
     width: "180px",
     height: "120px",
@@ -55,10 +46,11 @@ const hint = {
     height: "30px"
 }
 
+
 class MainPage extends Component {
     render() {
         return (
-            <div style={mainPageStyle}>
+            <div style={mainPageStyle} className="firstPage">
                 <Start/>
                 <Link to="/names">
                     <Next/>
@@ -75,7 +67,7 @@ class Start extends Component {
             <div>
                 <h1>Create household chores plan for you and your Roomies</h1>
                 <Link to="/names">
-                    <button>START</button>
+                    <button className="btn">START</button>
                 </Link>
             </div>
         )
@@ -93,12 +85,12 @@ class Next extends Component {
 
     render() {
         return (
-            <div>
-                <img src={arrow} className={this.state.class} alt="arrow"/>
+            <div className={this.state.class}>
             </div>
         )
     }
 }
+
 class Previous extends Component {
     constructor(props) {
         super(props);
@@ -109,39 +101,12 @@ class Previous extends Component {
 
     render() {
         return (
-            <div>
-                <img src={arrow} className={this.state.class} alt="arrow"/>
+            <div className={this.state.class}>
             </div>
         )
     }
 }
 
-// ###### RoomMates Number page #####
-// class RoomiesNumberPage extends Component{
-//     constructor(props){
-//         super(props);
-//         this.state = {roomiesNum: ""}
-//     }
-//     changeInput = (event) =>{
-//         const x = new Array(parseInt(this.state.roomiesNum,1));
-//         console.log(x);    };
-//
-//     render(){
-//   return (
-//           <div  style={mainPageStyle}>
-//             <Link to = "/">
-//             <Previous/>
-//             </Link>
-//             <h1>Type a number of roommates at your flat</h1>
-//               <input type= "number" value={this.state.roomiesNum} onChange={this.changeInput}/>
-//             <Link to = "/names">
-//             <Next/>
-//             </Link>
-//           </div>
-//         )
-//   }
-// }
-// ###### RoomMates Number page #####
 class NamesPage extends React.Component {
     constructor(props) {
         super(props);
@@ -169,9 +134,10 @@ class NamesPage extends React.Component {
                 <Link to="/">
                     <Previous/>
                 </Link>
+                <h1>Type your roomies' names</h1>
                 <form className="App" onSubmit={this.onSubmit}>
-                    <input value={this.state.term} onChange={this.onChange}/>
-                    <button>Add</button>
+                    <input value={this.state.term} onChange={this.onChange} className="input"/>
+                    <button className="btnAdd">Add</button>
                 </form>
                 <NamesConatiner add={this.props.add1} names={this.state.names}/>
                 <Link to="/chorelist">
@@ -181,20 +147,23 @@ class NamesPage extends React.Component {
         );
     }
 }
+
 class NamesConatiner extends React.Component {
+
     state = {
         names: this.props.names
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.props.add(this.generateNames());
+
     }
 
-    componentDidUpdate(prevProps){
-        if(prevProps.names !== this.props.names){
+    componentDidUpdate(prevProps) {
+        if (prevProps.names !== this.props.names) {
             this.setState({
                 names: this.props.names
-            }, ()=>{
+            }, () => {
                 this.props.add(this.generateNames());
             })
 
@@ -203,7 +172,13 @@ class NamesConatiner extends React.Component {
 
 
     generateNames = () => {
-        return this.state.names.map((item, index) => <div key={index} style={nameCardStyle}>{item}</div>)
+        // const colors = ['#12530D', '#E8AB0C', '#FF0000', '#1C0CE8'];
+        // const random_color = colors[Math.floor(Math.random() * colors.length)];
+        // const randomNameBg ={
+        //     backgroundColor: random_color
+        // }
+        // style={randomNameBg}
+        return this.state.names.map((item, index) => <div key={index} className="nameCard">{item}</div>)
     }
 
     render() {
@@ -245,11 +220,11 @@ class ChoresListPage extends React.Component {
                     <Previous/>
                 </Link>
                 <form className="App" onSubmit={this.onSubmit}>
-                    <input value={this.state.type} onChange={this.onChange}/>
-                    <Hint onClick ={this.onChange}/>
-                    <button>Add</button>
+                    <input value={this.state.type} onChange={this.onChange} className="input"/>
+                    <Hint onClick={this.onChange}/>
+                    <button className="btnAdd">Add</button>
                 </form>
-                <ChoresConatiner addChore={this.props.add3} chores={this.state.chores}  />
+                <ChoresConatiner addChore={this.props.add3} chores={this.state.chores}/>
                 <Link to="/table">
                     <Next/>
                 </Link>
@@ -257,20 +232,21 @@ class ChoresListPage extends React.Component {
         );
     }
 }
+
 class ChoresConatiner extends React.Component {
     state = {
         chores: this.props.chores
-    }
+    };
 
-    componentDidMount(){
+    componentDidMount() {
         this.props.addChore(this.generateNames());
     }
 
-    componentDidUpdate(prevProps){
-        if(prevProps.chores !== this.props.chores){
+    componentDidUpdate(prevProps) {
+        if (prevProps.chores !== this.props.chores) {
             this.setState({
                 chores: this.props.chores
-            }, ()=>{
+            }, () => {
                 this.props.addChore(this.generateNames());
             })
 
@@ -279,8 +255,8 @@ class ChoresConatiner extends React.Component {
 
 
     generateNames = () => {
-        return this.state.chores.map((item, index) => <div key={index} style={choresCardStyle}>{item}</div>)
-    }
+        return this.state.chores.map((item, index) => <div key={index} className="choreCard">{item}</div>)
+    };
 
     render() {
         return (
@@ -290,6 +266,7 @@ class ChoresConatiner extends React.Component {
         )
     }
 }
+
 class Hint extends React.Component {
     constructor(props) {
         super(props);
@@ -323,7 +300,7 @@ class Hint extends React.Component {
 
         return (
             <div>
-                <div className="hint" style={hint} onClick={this.showHint}  value={this.state.term}>Hint</div>
+                <div className="hint" style={hint} onClick={this.showHint} value={this.state.term}>Hint</div>
                 <div style={hidden}>
                     <button onClick={this.addChore}>vacuuming</button>
                     <button>washing and putting away the dishes</button>
@@ -337,13 +314,14 @@ class Hint extends React.Component {
         )
     }
 }
+
 // ###### Table page #####
 class ChoresTablePage extends React.Component {
     exportPDFWithComponent = () => {
         this.pdfExportComponent.save();
     }
+
     render() {
-        console.log(this.props.add2)
         return (
             <div style={mainPageStyle}>
                 <Link to="/chorelist">
@@ -360,26 +338,17 @@ class ChoresTablePage extends React.Component {
                     </div>
                 </div>
                 <button onClick={this.exportPDFWithComponent}>Export with component</button>
-                <PDFExport ref={(component) => this.pdfExportComponent = component} paperSize="A4" landscape={true}  >
-                <TableChores cellChores = {this.props.add4}/>
+                <PDFExport ref={(component) => this.pdfExportComponent = component} paperSize="A4" landscape={true}>
+                    <TableChores cellChores={this.props.add4}/>
+                </PDFExport>
                 <Link to="final">
                     <Next/>
                 </Link>
-                </PDFExport>
-
             </div>
         )
     }
 }
-class Table extends React.Component {
-    render() {
-        return (
-            <h1>tu będzie tabela</h1>
 
-
-        )
-    }
-}
 class FinalPage extends React.Component {
     render() {
         return (
@@ -400,11 +369,23 @@ class FinalPage extends React.Component {
     }
 }
 
+class NotFound extends React.Component {
+    render() {
+        return (
+            <div className="NotFound">
+                <h1>404 Page not found</h1>
+            </div>
+        )
+    }
+}
+
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {name: [],
-                    chore: []};
+        this.state = {
+            name: [],
+            chore: []
+        };
     }
 
     addNameContainer = names => {
@@ -420,10 +401,16 @@ class App extends Component {
                 <div>
                     <Switch>
                         <Route exact path="/" component={MainPage}/>
-                        <Route path="/names" render={(props) => <NamesPage {...props} names={this.state.name} add1={this.addNameContainer}/>}/>
-                        <Route path="/chorelist" render={(props) => <ChoresListPage {...props} chores={this.state.chore} add3={this.addChoreContainer}/>}/>
-                        <Route path="/table" render={(props) => <ChoresTablePage {...props} add2={this.state.name} add1={this.addNameContainer} add4={this.state.chore} add3={this.addChoreContainer}/>}/>
+                        <Route path="/names" render={(props) => <NamesPage {...props} names={this.state.name}
+                                                                           add1={this.addNameContainer}/>}/>
+                        <Route path="/chorelist" render={(props) => <ChoresListPage {...props} chores={this.state.chore}
+                                                                                    add3={this.addChoreContainer}/>}/>
+                        <Route path="/table" render={(props) => <ChoresTablePage {...props} add2={this.state.name}
+                                                                                 add1={this.addNameContainer}
+                                                                                 add4={this.state.chore}
+                                                                                 add3={this.addChoreContainer}/>}/>
                         <Route path="/final" component={FinalPage}/>
+                        <Route component={NotFound}/>
                     </Switch>
                 </div>
             </HashRouter>

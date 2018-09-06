@@ -27,14 +27,6 @@
   to { transform: rotate(360deg); }
 }
 
-.ArrowNext{
-  transform: rotate(90deg);
-
-}
-.ArrowPrev{
-  transform: rotate(-90deg);
-
-}
 
 .cardContainer{
   display: flex;
