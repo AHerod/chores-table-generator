@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
-import arrow from './arrow.svg';
 import "./sass/main.css"
 import {render} from 'react-dom';
 import TableChores from './table.';
-import Hexagon from 'react-hexagon';
 import {PDFExport, savePDF} from '@progress/kendo-react-pdf';
 import {
     HashRouter,
@@ -59,7 +57,6 @@ class MainPage extends Component {
         )
     }
 }
-
 //component for main heading and start button
 class Start extends Component {
     render() {
@@ -178,8 +175,10 @@ class NamesConatiner extends React.Component {
         //     backgroundColor: random_color
         // }
         // style={randomNameBg}
-        return this.state.names.map((item, index) => <div key={index} className="nameCard">{item}</div>)
-    }
+        return this.state.names.map((item, index) => {
+            return typeof item === "string" ? <div key={index} className="nameCard">{item}</div> : item
+        })
+    };
 
     render() {
         return (
@@ -219,6 +218,7 @@ class ChoresListPage extends React.Component {
                 <Link to="/names">
                     <Previous/>
                 </Link>
+                <h1>Type chores you want to share</h1>
                 <form className="App" onSubmit={this.onSubmit}>
                     <input value={this.state.type} onChange={this.onChange} className="input"/>
                     <Hint onClick={this.onChange}/>
@@ -255,7 +255,9 @@ class ChoresConatiner extends React.Component {
 
 
     generateNames = () => {
-        return this.state.chores.map((item, index) => <div key={index} className="choreCard">{item}</div>)
+        return this.state.chores.map((item, index) => {
+            return typeof item === 'string' ? <div key={index} className="choreCard">{item}</div> : item
+        })
     };
 
     render() {
@@ -301,11 +303,11 @@ class Hint extends React.Component {
         return (
             <div>
                 <div className="hint" style={hint} onClick={this.showHint} value={this.state.term}>Hint</div>
-                <div style={hidden}>
-                    <button onClick={this.addChore}>vacuuming</button>
-                    <button>washing and putting away the dishes</button>
-                    <button>empty waste paper bins</button>
-                    <button>clean windows</button>
+                <div style={hidden} className="hints">
+                    <button className="hintsBtn">vacuuming</button>
+                    <button className="hintsBtn">washing and putting away the dishes</button>
+                    <button className="hintsBtn">empty waste paper bins</button>
+                    <button className="hintsBtn">clean windows</button>
                 </div>
                 <div style={shown}>
 
@@ -322,6 +324,7 @@ class ChoresTablePage extends React.Component {
     }
 
     render() {
+
         return (
             <div style={mainPageStyle}>
                 <Link to="/chorelist">
@@ -329,15 +332,11 @@ class ChoresTablePage extends React.Component {
                 </Link>
                 <h1>Divide up chores</h1>
                 <div className="lists">
-                    <div className="names">
+                    <div>
                         {this.props.add2}
                     </div>
-                    <div className="chores">
-                        {this.props.add4}
-
-                    </div>
                 </div>
-                <button onClick={this.exportPDFWithComponent}>Export with component</button>
+                <button onClick={this.exportPDFWithComponent} className="btn">DOWNLOAD</button>
                 <PDFExport ref={(component) => this.pdfExportComponent = component} paperSize="A4" landscape={true}>
                     <TableChores cellChores={this.props.add4}/>
                 </PDFExport>
@@ -356,13 +355,15 @@ class FinalPage extends React.Component {
                 <Link to="/table">
                     <Previous/>
                 </Link>
-                <h1>Your plan is ready!</h1>
-                <h2>Now you can download it & Print</h2>
-                <h3>or</h3>
-                <h2>send by mail to your roommates</h2>
+                <div className="infoMssg">
+                    <h1>Your plan is ready!</h1>
+                    <h2>Now you can download it & Print</h2>
+                    <h3>or</h3>
+                    <h2>send by mail to your roommates</h2>
+                </div>
                 <div style={{display: "flex"}}>
-                    <button>Download</button>
-                    <button>Send</button>
+                    <button className="btn">Download</button>
+                    <button className="btn">Send</button>
                 </div>
             </div>
         )

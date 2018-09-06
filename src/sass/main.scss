@@ -18,7 +18,7 @@
 
 %bg-sizing {
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom;
   background-size: cover;
 }
 
@@ -30,10 +30,10 @@
 
 %textShadows {
   text-shadow: 0 -1px 0 #ccc,
-  0 -2px 0 #c9c9c9,
-  0 -3px 0 #bbb,
-  0 -3px 0 #b9b9b9,
-  0 -2px 0 #aaa,
+  0 -1px 0 #c9c9c9,
+  0 2px 0 #bbb,
+  0 2px 0 #b9b9b9,
+  0 4px 0 #aaa,
   0 6px 1px rgba(0, 0, 0, .1),
   0 0 5px rgba(0, 0, 0, .1),
   0 1px 3px rgba(0, 0, 0, .3),
@@ -42,7 +42,14 @@
   0 10px 10px rgba(0, 0, 0, .2),
   0 20px 20px rgba(0, 0, 0, .15);
 }
-
+%input{
+  border: none;
+  display: block;
+  border-radius: 0.9em;
+  font-weight: bold;
+  padding: 0 10px;
+  outline: none;
+}
 %cards {
   width: 180px;
   height: 100px;
@@ -51,6 +58,7 @@
   align-items: center;
   font-weight: bold;
   font-size: 20px;
+  padding: 7px;
 }
 
 %buttons {
@@ -68,11 +76,13 @@
   font-weight: bold;
   display: inline-block;
   height: 40px;
+  outline: none;
 }
 
 h1 {
-  color: #E1E5F2;
-  @extend %textShadows
+  color: #E33F5A;
+  @extend %textShadows;
+  margin:15px;
 }
 
 body {
@@ -82,26 +92,22 @@ body {
 .btn {
   width: 200px;
   @extend %buttons;
-
   @extend %shadows
 }
 
 .btnAdd {
   width: 100px;
+  margin: 10px;
   @extend %buttons;
 }
 
 .input {
-  border: none;
-  display: block;
-  background-color: #E8E8E8;
-  border-radius: 0.9em;
-  color: #1F7A8C;
+  @extend  %input;
   height: 40px;
-  font-weight: bold;
   font-size: 22px;
-  padding: 0 10px;
-  outline: none;
+  color: #1F7A8C;
+  background-color: #E8E8E8;
+  padding: 0 20px;
   @extend %shadows;
 }
 
@@ -152,16 +158,30 @@ body {
 }
 
 .nameCard {
-  border-radius: 30%;
-  background-color: #54D95A;
-  color: #283F3B;
+  border-radius: 20%;
+  background-color: #6FB200;
+  color: #3F6600;
   @extend %cards;
   @extend %shadows;
 }
 
 .choreCard {
   background-color: #EFBD7E;
-  color: #8C6F4A;
+  color: #8C6A4A;
   @extend %cards;
   @extend %shadows;
+}
+.hintsBtn{
+
+  @extend %input;
+  height: 20px;
+  font-size: 12px;
+  background-color: lightslategray;
+  margin: 2px;
+}
+.hint{
+  font-weight: bold;
+}
+.infoMssg{
+  margin:60px;
 }
