@@ -19,7 +19,7 @@ const mainPageStyle = {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    height: "100vh"
+    height: "100vh",
 };
 
 const choresCardStyle = {
@@ -48,9 +48,9 @@ const hint = {
 class MainPage extends Component {
     render() {
         return (
-            <div style={mainPageStyle} className="firstPage">
+            <div style={mainPageStyle} className="firstPage" >
                 <Start/>
-                <Link to="/names">
+                <Link to="/names" >
                     <Next/>
                 </Link>
             </div>
@@ -62,7 +62,7 @@ class Start extends Component {
     render() {
         return (
             <div>
-                <h1>Create household chores plan for you and your Roomies</h1>
+                <h1>Create household chores plan for You and Your Roomies</h1>
                 <Link to="/names">
                     <button className="btn">START</button>
                 </Link>
@@ -137,6 +137,7 @@ class NamesPage extends React.Component {
                     <button className="btnAdd">Add</button>
                 </form>
                 <NamesConatiner add={this.props.add1} names={this.state.names}/>
+                    <p className="girlPic"></p>
                 <Link to="/chorelist">
                     <Next/>
                 </Link>
@@ -146,12 +147,14 @@ class NamesPage extends React.Component {
 }
 
 class NamesConatiner extends React.Component {
-
     state = {
-        names: this.props.names
-    }
+        names: this.props.names,
+        shown: true,
+
+    };
 
     componentDidMount() {
+
         this.props.add(this.generateNames());
 
     }
@@ -169,6 +172,8 @@ class NamesConatiner extends React.Component {
 
 
     generateNames = () => {
+
+
         // const colors = ['#12530D', '#E8AB0C', '#FF0000', '#1C0CE8'];
         // const random_color = colors[Math.floor(Math.random() * colors.length)];
         // const randomNameBg ={
@@ -176,11 +181,15 @@ class NamesConatiner extends React.Component {
         // }
         // style={randomNameBg}
         return this.state.names.map((item, index) => {
-            return typeof item === "string" ? <div key={index} className="nameCard">{item}</div> : item
+
+
+
+            return typeof item === "string" ? <div key={index} className="nameCard" >{item}</div> : item
         })
     };
 
     render() {
+
         return (
             <div style={namesContainerStyle}>
                 {this.generateNames()}
@@ -309,9 +318,7 @@ class Hint extends React.Component {
                     <button className="hintsBtn">empty waste paper bins</button>
                     <button className="hintsBtn">clean windows</button>
                 </div>
-                <div style={shown}>
 
-                </div>
             </div>
         )
     }
@@ -331,15 +338,16 @@ class ChoresTablePage extends React.Component {
                     <Previous/>
                 </Link>
                 <h1>Divide up chores</h1>
-                <div className="lists">
-                    <div>
+                <div className="tablePage">
+                    <div className="namesList">
                         {this.props.add2}
                     </div>
-                </div>
-                <button onClick={this.exportPDFWithComponent} className="btn">DOWNLOAD</button>
                 <PDFExport ref={(component) => this.pdfExportComponent = component} paperSize="A4" landscape={true}>
-                    <TableChores cellChores={this.props.add4}/>
+                    <TableChores cellChores={this.props.add4} cellNames ={this.props.add2}/>
                 </PDFExport>
+                    <button onClick={this.exportPDFWithComponent} className="btn">DOWNLOAD</button>
+
+                </div>
                 <Link to="final">
                     <Next/>
                 </Link>
@@ -357,13 +365,10 @@ class FinalPage extends React.Component {
                 </Link>
                 <div className="infoMssg">
                     <h1>Your plan is ready!</h1>
-                    <h2>Now you can download it & Print</h2>
-                    <h3>or</h3>
-                    <h2>send by mail to your roommates</h2>
                 </div>
-                <div style={{display: "flex"}}>
-                    <button className="btn">Download</button>
-                    <button className="btn">Send</button>
+                <div style={{display: "flex"}} className="btnContainer">
+                    <button className="btnF">Download</button>
+                    <button className="btnF">Send By Mail</button>
                 </div>
             </div>
         )

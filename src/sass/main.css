@@ -11,18 +11,18 @@
   padding: 0;
   margin: 0; }
 
-.firstPage, .ArrowNext, .ArrowPrev {
+.firstPage, .ArrowNext, .ArrowPrev, .girlPic {
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover; }
 
-.btn, .input, .nameCard, .choreCard {
+.btn, .btnF, .input, .nameCard, .choreCard {
   -webkit-box-shadow: 0px 0px 5px 1px #4d484d;
   -moz-box-shadow: 0px 0px 5px 1px #4d484d;
   box-shadow: 0px 0px 5px 1px #4d484d; }
 
 h1 {
-  text-shadow: 0 -1px 0 #ccc, 0 -1px 0 #c9c9c9, 0 2px 0 #bbb, 0 2px 0 #b9b9b9, 0 4px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
+  text-shadow: 2px 2px 2px rgba(28, 110, 164, 0); }
 
 .input, .hintsBtn {
   border: none;
@@ -39,12 +39,11 @@ h1 {
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 30px;
   padding: 7px; }
 
-.btn, .btnAdd {
+.btn, .btnF, .btnAdd {
   padding: 0.7em 1.4em;
-  margin: 0 0.3em 0.3em 0;
   border-radius: 0.9em;
   border: none;
   text-decoration: none;
@@ -56,7 +55,9 @@ h1 {
   position: relative;
   font-weight: bold;
   display: inline-block;
-  height: 40px;
+  height: 50px;
+  line-height: 20px;
+  font-size: 20px;
   outline: none; }
 
 h1 {
@@ -66,7 +67,7 @@ h1 {
 body {
   background-color: #9CDDE3; }
 
-.btn {
+.btn, .btnF {
   width: 200px; }
 
 .btnAdd {
@@ -88,6 +89,9 @@ body {
   .firstPage h1 {
     width: 800px;
     font-size: 46px; }
+  .firstPage button {
+    margin-top: 50px;
+    margin-bottom: 30px; }
 
 .NotFound {
   font-size: 50px;
@@ -100,43 +104,90 @@ body {
   background-size: cover;
   background-position: center; }
   .NotFound h1 {
-    padding-left: 50px; }
+    padding-left: 50px;
+    color: whitesmoke;
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3); }
 
 .ArrowNext {
   transform: rotate(-90deg);
   background-image: url("img/arrow.png");
-  width: 40px;
-  height: 40px; }
+  width: 50px;
+  height: 50px; }
 
 .ArrowPrev {
   transform: rotate(90deg);
   background-image: url("img/arrow.png");
-  width: 40px;
-  height: 40px; }
+  width: 50px;
+  height: 50px; }
 
 .nameCard {
-  border-radius: 20%;
+  border-radius: 50%;
   background-color: #6FB200;
-  color: #3F6600; }
+  color: #3F6600;
+  width: 180px;
+  height: 180px; }
 
 .choreCard {
   background-color: #EFBD7E;
   color: #8C6A4A; }
 
 .hintsBtn {
-  height: 20px;
-  font-size: 12px;
+  height: 30px;
+  font-size: 20px;
   background-color: lightslategray;
   margin: 2px; }
 
 .hint {
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 24px; }
 
 .infoMssg {
-  margin: 60px; }
+  margin: 60px;
+  font-size: 46px; }
+
+.namesList {
+  display: flex;
+  flex-direction: row; }
+
+.tablePage {
+  width: 1400px; }
 
 td {
-  background-color: #3F6600; }
+  background-color: whitesmoke; }
 
 table {
-  border: 4px solid green; }
+  border: 4px solid whitesmoke; }
+
+.mainPageStyle {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh; }
+
+.btnF {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
+  .btnF:hover {
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3); }
+
+.btnF {
+  height: 80px; }
+
+.btnContainer {
+  width: 480px;
+  display: flex;
+  justify-content: space-between; }
+
+.girlPic {
+  width: 200px;
+  height: 500px;
+  background-image: url("img/girl.png"); }

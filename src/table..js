@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -7,6 +6,8 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import React, {Component} from 'react';
+
 
 const CustomTableCell = withStyles(theme => ({
     head: {
@@ -42,25 +43,34 @@ function createData(chore,mon, tue, wed, thu, fri,sat, sun) {
     id += 1;
     return { id,chore, mon, tue, wed, thu, fri,sat, sun};
 }
+class CustomizedTable extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            mon: "",
+            tue: "",
+            wed: "",
+            thu: "",
+            fri: "",
+            sat: "",
+            sun: "wolne"
+        }
+    }
 
-// const rows = [
-//     createData('chore1', 159, 6.0, 24, 4.0,2,8,9),
-//     createData('chore2', 237, 9.0, 37, 4.32,2,2),
-//     createData('chore3', 262, 16.0, 24, 6.0),
-//     createData('chore4', 305, 3.7, 67, 4.3),
-//     createData('chore5', 356, 16.0, 49, 3.9),
-//     createData('chore6', 356, 16.0, 49, 3.9),
-//     createData('chore7', 356, 16.0, 49, 3.9),
-//
-// ];
+render (){
+    const { classes, cellChores } = this.props;
+    const nameArray = [];
+    nameArray.push(this.props.cellNames);
+    console.log(nameArray);
+    let rows = cellChores.map(chore => {
 
+         return createData(chore.props.children, this.state.mon,this.state.tue, this.state.wed, this.state.thu, this.state.fri, this.state.sat, this.state.sun)
+    });
 
-function CustomizedTable(props) {
-    const { classes, cellChores } = props;
+    // if(nameArray.length > 0){
+    //          this.setState({mon: this.props.cellNames});
+    //      }
 
-    const rows = cellChores.map(chore => {
-        return createData(chore.props.children)
-    })
 
     return (
         <Paper className={classes.root}>
@@ -96,6 +106,8 @@ function CustomizedTable(props) {
             </Table>
         </Paper>
     );
+}
+
 }
 
 CustomizedTable.propTypes = {
