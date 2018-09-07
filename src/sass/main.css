@@ -11,7 +11,7 @@
   padding: 0;
   margin: 0; }
 
-.firstPage, .ArrowNext, .ArrowPrev, .girlPic {
+.firstPage, .ArrowNext, .ArrowPrev, .girlPic, .utenPic, .tools {
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover; }
@@ -24,7 +24,7 @@
 h1 {
   text-shadow: 2px 2px 2px rgba(28, 110, 164, 0); }
 
-.input, .hintsBtn {
+.input, .hintsBtn, .formFinal .formName, .formFinal .formEmail, .formFinal .formMssg {
   border: none;
   display: block;
   border-radius: 0.9em;
@@ -142,8 +142,9 @@ body {
   font-size: 24px; }
 
 .infoMssg {
-  margin: 60px;
   font-size: 46px; }
+  .infoMssg h1 {
+    font-size: 50px; }
 
 .namesList {
   display: flex;
@@ -166,13 +167,13 @@ table {
   flex-direction: column;
   height: 100vh; }
 
-.btnF {
+.grow, .btnF {
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
   -ms-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out; }
-  .btnF:hover {
+  .grow:hover, .btnF:hover {
     -webkit-transform: scale(1.3);
     -moz-transform: scale(1.3);
     -ms-transform: scale(1.3);
@@ -184,10 +185,65 @@ table {
 
 .btnContainer {
   width: 480px;
+  height: 120px;
   display: flex;
   justify-content: space-between; }
 
 .girlPic {
-  width: 200px;
-  height: 500px;
-  background-image: url("img/girl.png"); }
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-image: url("img/girl.png");
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+.utenPic {
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-image: url("img/uten.png");
+  z-index: -1;
+  position: absolute;
+  bottom: 10px;
+  left: 20px; }
+
+.tools {
+  width: 400px;
+  height: 400px;
+  background-size: contain;
+  background-image: url("img/allTools.png");
+  z-index: -1;
+  position: absolute;
+  bottom: 0px;
+  left: 20px; }
+
+.formFinal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .formFinal .formName {
+    width: 350px;
+    height: 80px;
+    margin-bottom: 5px;
+    font-size: 34px; }
+  .formFinal .formEmail {
+    margin-bottom: 5px;
+    width: 350px;
+    height: 80px;
+    font-size: 34px; }
+  .formFinal .formMssg {
+    height: 170px;
+    width: 450px;
+    margin-bottom: 5px;
+    font-size: 34px; }
+
+.validation {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left; }
+
+.btnDownLoad {
+  margin-top: 20px;
+  margin-bottom: 30px; }
