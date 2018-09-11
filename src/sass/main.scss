@@ -186,6 +186,8 @@ body {
 .hint{
   font-weight: bold;
   font-size: 24px;
+  width: 30px;
+  height: 30px;
 }
 .infoMssg{
   font-size: 46px;
@@ -202,7 +204,7 @@ body {
   width: 1400px;
 }
 thead td{
-  background-color: #3F6600;
+  background-color: moccasin;
 }
 td{
   background-color: whitesmoke;
@@ -210,7 +212,7 @@ td{
 }
 table{
   border: 4px solid whitesmoke;
-  width: 900px;
+  width: 100%;
 }
 
 .mainPageStyle{
@@ -326,4 +328,23 @@ table{
 .btnDownLoad{
   margin-top: 20px;
   margin-bottom: 30px;
+}
+
+.mainPageStyle{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.namesContainerStyle{
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 480px;
+  width: 1000px;
+  flex-wrap: wrap;
 }
