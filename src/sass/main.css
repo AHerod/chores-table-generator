@@ -153,11 +153,16 @@ body {
 .tablePage {
   width: 1400px; }
 
+thead td {
+  background-color: #3F6600; }
+
 td {
-  background-color: whitesmoke; }
+  background-color: whitesmoke;
+  height: 50px; }
 
 table {
-  border: 4px solid whitesmoke; }
+  border: 4px solid whitesmoke;
+  width: 900px; }
 
 .mainPageStyle {
   text-align: center;

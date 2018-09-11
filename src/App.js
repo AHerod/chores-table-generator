@@ -3,6 +3,7 @@ import "./sass/main.css"
 import {render} from 'react-dom';
 import TableChores from './table.';
 import {PDFExport, savePDF} from '@progress/kendo-react-pdf';
+import NewTable from './newTable.js';
 import {
     HashRouter,
     Route,
@@ -64,7 +65,7 @@ class Start extends Component {
             <div>
                 <h1>Create household chores plan for You and Your Roomies</h1>
                 <Link to="/names">
-                    <button className="btn">START</button>
+                    <button className="btn grow">START</button>
                 </Link>
             </div>
         )
@@ -185,7 +186,6 @@ class NamesConatiner extends React.Component {
         return this.state.names.map((item, index) => {
 
 
-
             return typeof item === "string" ? <div key={index} className="nameCard" >{item}</div> : item
         })
     };
@@ -214,7 +214,6 @@ class ChoresListPage extends React.Component {
     onChange = (event) => {
         this.setState({type: event.target.value});
     }
-
     onSubmit = (event) => {
         event.preventDefault();
         this.setState({
@@ -232,7 +231,7 @@ class ChoresListPage extends React.Component {
                 <h1>Type chores you want to share</h1>
                 <form className="App" onSubmit={this.onSubmit}>
                     <input value={this.state.type} onChange={this.onChange} className="input"/>
-                    <Hint onClick={this.onChange}/>
+                    <Hint addChore={this.props.add3} chores={this.state.chores}/>
                     <button className="btnAdd">Add</button>
                 </form>
                 <ChoresConatiner addChore={this.props.add3} chores={this.state.chores}/>
@@ -286,7 +285,6 @@ class Hint extends React.Component {
         super(props);
         this.state = {
             shown: true,
-            type: ''
         };
     }
 
@@ -296,10 +294,6 @@ class Hint extends React.Component {
             shown: !this.state.shown
 
         });
-    }
-    addChore = (event) => {
-        event.preventDefault();
-
     }
 
     render() {
@@ -314,12 +308,12 @@ class Hint extends React.Component {
 
         return (
             <div>
-                <div className="hint" style={hint} onClick={this.showHint} value={this.state.term}>Hint</div>
+                <div className="hint" style={hint} onClick={this.showHint}>Hint</div>
                 <div style={hidden} className="hints">
-                    <button className="hintsBtn">vacuuming</button>
-                    <button className="hintsBtn">washing and putting away the dishes</button>
-                    <button className="hintsBtn">empty waste paper bins</button>
-                    <button className="hintsBtn">clean windows</button>
+                    <span className="hintsBtn">vacuuming</span>
+                    <span className="hintsBtn">washing and putting away the dishes</span>
+                    <span className="hintsBtn">empty waste paper bins</span>
+                    <span className="hintsBtn">clean windows</span>
                 </div>
 
             </div>
@@ -342,12 +336,15 @@ class ChoresTablePage extends React.Component {
                 </Link>
                 <h1>Divide up chores</h1>
                 <div className="tablePage">
+
                     <div className="namesList">
                         {this.props.add2}
                     </div>
                 <PDFExport ref={(component) => this.pdfExportComponent = component} paperSize="A4" landscape={true}>
-                    <TableChores cellChores={this.props.add4} cellNames ={this.props.add2}/>
+                    {/*<TableChores cellChores={this.props.add4} cellNames ={this.props.add2}/>*/}
                 </PDFExport>
+                    <NewTable  cellChores={this.props.add4} cellNames ={this.props.add2}/>
+
                     <button onClick={this.exportPDFWithComponent} className="btnDownLoad btn grow">DOWNLOAD</button>
 
                 </div>
@@ -379,6 +376,9 @@ class FinalPage extends React.Component {
         }
     }
 
+    exportPDFWithComponent = () => {
+        this.pdfExportComponent.save();
+    }
 
     showForm = (event) => {
         event.preventDefault();
@@ -438,7 +438,7 @@ class FinalPage extends React.Component {
                         <h1>Your plan is ready!</h1>
                     </div>
                     <div className="btnContainer" style = {this.state.flex}>
-                        <button className="btnF">Download</button>
+                        <button className="btnF" onClick={this.exportPDFWithComponent}>Download</button>
                         <button className="btnF" onClick={this.showForm}>Send By Mail</button>
 
                     </div>
