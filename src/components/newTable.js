@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import Target from "./dropCells";
 export default class NewTable extends React.Component {
 
     render() {
@@ -23,13 +23,14 @@ export default class NewTable extends React.Component {
                 {this.props.cellChores.map(chore => {
                     return <tr>
                     <td>{chore.props.children}</td>
-                    <td>coś</td>
-                    <td>coś</td>
-                    <td>coś</td>
-                    <td>coś</td>
-                    <td>coś</td>
-                    <td>coś</td>
-                    <td>coś</td>
+                    <Target item = {this.props.cellNames}/>
+                    <Target item = {this.props.cellNames}/>
+                    <Target item = {this.props.cellNames}/>
+                    <Target item = {this.props.cellNames}/>
+                    <Target item = {this.props.cellNames}/>
+                    <Target item = {this.props.cellNames}/>
+                    <Target item = {this.props.cellNames}/>
+
                     </tr>
                 })}
                 </tbody>

@@ -12,6 +12,8 @@ import ChoresListPage from './components/choresListPage';
 import ChoresTablePage from './components/tablePage';
 import FinalPage from './components/finalPage'
 import NotFound from './components/nofFoundPage'
+import {DragDropContext} from 'react-dnd'
+
 import {
     HashRouter,
     Route,
@@ -20,6 +22,7 @@ import {
     NavLink,
 } from 'react-router-dom';
 import './App.css';
+import HTML5Backend from "react-dnd-html5-backend";
 
 class App extends Component {
     constructor(props) {
@@ -59,4 +62,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default DragDropContext(HTML5Backend)(App)

@@ -4,6 +4,7 @@ import Previous from "./previous";
 import PDFExport from "@progress/kendo-react-pdf/dist/npm/PDFExport";
 import NewTable from "./newTable";
 import Next from "./next";
+import DragNames from "./dragNames";
 
 export default class ChoresTablePage extends React.Component {
     exportPDFWithComponent = () => {
@@ -21,11 +22,16 @@ export default class ChoresTablePage extends React.Component {
                 <div className="tablePage">
 
                     <div className="namesList">
-                        {this.props.add2}
+                        {this.props.add2.map((item, index) => (
+                            <DragNames item={item}  />
+                        ))}
+                        {/*<DragNames item = {this.props.add2}/>*/}
+
+                        {/*{this.props.add2}*/}
                     </div>
                     <PDFExport ref={(component) => this.pdfExportComponent = component} paperSize="A4" landscape={true}>
                         {/*<TableChores cellChores={this.props.add4} cellNames ={this.props.add2}/>*/}
-                        <NewTable  cellChores={this.props.add4} cellNames ={this.props.add2}/>
+                        <NewTable  cellChores={this.props.add4} cellNames={this.props.add2}/>
 
                     </PDFExport>
 
