@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Chores Table Generator is a tool to help students who live in a shared house/flat organize their house cleaning habits by creating weekly schedule.
+Chores Table Generator is a tool created to help students who live in a shared house/flat organize their house cleaning habits. You can create your weekly cleaning schedule by adding your roommates' names and various chores to share. 
 
 ----
 ## Usage
@@ -34,3 +34,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 )
 + Webpack
 + Kendo UI (for creating PDF file)
+---
+## app is still in development mode ❗️:construction:
+### my plans for this app development
+- [ ] change Drop feature
+- [ ] create final page: with email form and PDF file download button
+
