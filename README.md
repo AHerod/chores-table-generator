@@ -39,4 +39,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### my plans for this app development
 - [ ] change Drop feature
 - [ ] create final page: with email form and PDF file download button
+- [ ] improve app design 
 
