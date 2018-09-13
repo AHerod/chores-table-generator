@@ -8,8 +8,9 @@ Chores Table Generator is a tool created to help students who live in a shared h
 ## Installation
 
 ```
+npm init
 npm install
-npm start
+npm run start
 ```
 
 
