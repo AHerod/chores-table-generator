@@ -5,25 +5,35 @@ import { DropTarget } from 'react-dnd';
 function collect(connect, monitor) {
     return {
         connectDropTarget: connect.dropTarget(),
-        hovered: monitor.isOver(),
+        isOver: monitor.isOver(),
         item: monitor.getItem(),
+
     }
 }
 
-class Target extends Component {
+
+class DropCells extends Component {
     state = {
         tdValue: ""
     };
     render() {
-        const { connectDropTarget, hovered, item } = this.props;
-        const backgroundColor = hovered ? 'lightgreen' : 'white';
-
+        const { connectDropTarget, isOver, item} = this.props;
+        const backgroundColor = isOver ? 'lightgreen' : 'white';
+        const dropped = isOver? this.props.item : 'no';
         return connectDropTarget(
             <td className="target" style={{ background: backgroundColor }}>
-                {this.state.tdValue}
+                 {dropped}
             </td>
         );
     }
 }
 
-export default DropTarget('item', {}, collect)(Target);
+class Element extends Component{
+    state = {
+        value: this.props.newValue
+    };
+    render(){
+        return <span> {this.state.value}</span>
+    }
+}
+export default DropTarget('item', {}, collect)(DropCells);

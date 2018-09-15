@@ -23,7 +23,7 @@ export default class ChoresTablePage extends React.Component {
 
                     <div className="namesList">
                         {this.props.add2.map((item, index) => (
-                            <DragNames item={item}  />
+                            <DragNames key={index} item={item}  />
                         ))}
                         {/*<DragNames item = {this.props.add2}/>*/}
 

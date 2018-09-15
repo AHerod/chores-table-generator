@@ -203,9 +203,7 @@ body {
 .tablePage{
   width: 1400px;
 }
-thead td{
-  background-color: moccasin;
-}
+
 td{
   background-color: whitesmoke;
   height: 50px;
@@ -213,6 +211,13 @@ td{
 table{
   border: 4px solid whitesmoke;
   width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+
+}
+thead td{
+  background-color: moccasin;
+  font-size: 24px;
 }
 
 .mainPageStyle{
