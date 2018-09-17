@@ -11,7 +11,6 @@ function collect(connect, monitor) {
     }
 }
 
-
 class DropCells extends Component {
     state = {
         tdValue: ""
@@ -19,7 +18,7 @@ class DropCells extends Component {
     render() {
         const { connectDropTarget, isOver, item} = this.props;
         const backgroundColor = isOver ? 'lightgreen' : 'white';
-        const dropped = isOver? this.props.item : 'no';
+        const dropped = isOver?  this.props.item : this.state.tdValue;
         return connectDropTarget(
             <td className="target" style={{ background: backgroundColor }}>
                  {dropped}
