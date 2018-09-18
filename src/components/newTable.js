@@ -8,14 +8,14 @@ export default class NewTable extends React.Component {
             <table>
                 <thead>
                 <tr>
-                    <td>chore</td>
-                    <td>mon</td>
-                    <td>tue</td>
-                    <td>wed</td>
-                    <td>thu</td>
-                    <td>fri</td>
-                    <td>sat</td>
-                    <td>sun</td>
+                    <td>CHORES</td>
+                    <td>MONDAY</td>
+                    <td>TUESDAY</td>
+                    <td>WEDNESDAY</td>
+                    <td>THURSDAY</td>
+                    <td>FRIDAY</td>
+                    <td>SATURDAY</td>
+                    <td>SUNDAY</td>
                 </tr>
                 </thead>
                 <tbody>

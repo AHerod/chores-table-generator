@@ -1,11 +1,5 @@
 import React, {Component} from 'react';
 import "./sass/main.css"
-import {render} from 'react-dom';
-import TableChores from './components/table.';
-import {PDFExport, savePDF} from '@progress/kendo-react-pdf';
-import NewTable from './components/newTable';
-import Next from './components/next';
-import Previous from './components/previous';
 import MainPage from './components/mainPage';
 import NamesPage from './components/namesPage';
 import ChoresListPage from './components/choresListPage';
