@@ -22,16 +22,9 @@ npm run start
 
 1. Click the START button
 2. Type all roommates' names and go to the next section
-
-<img src="https://media.giphy.com/media/7E5pt4VIQUelXf7f2W/giphy.gif" data-canonical-src="https://media.giphy.com/media/7E5pt4VIQUelXf7f2W/giphy.gif"  width="550" height="350"  />
-
-
 3. Type all the chores you would like to include in the table
    + if you are out of ideas you can look for some examples by clicking on the Hint tab
 4. Go to the next section 
-
-<img src="https://media.giphy.com/media/TEWnhYk96iVAaGLaeL/giphy.gif" data-canonical-src="https://media.giphy.com/media/TEWnhYk96iVAaGLaeL/giphy.gif" width="550" height="350" />
-
 5. Now the table is created. 
    + every chore has a single row with empty cells for names card
    + drag the name card from the list and put it in a table's cell
